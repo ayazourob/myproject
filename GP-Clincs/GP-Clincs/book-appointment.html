@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Connect - حجز موعد</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Flatpickr Calendar CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-bootstrap.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary fw-bold">Medical</span>
+                <span class="text-info">Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 me-3">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center text-decoration-none" href="#" role="button"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2"
+                                style="width: 35px; height: 35px;">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="text-dark">أحمد محمد</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="patient-profile.html"><i
+                                        class="fas fa-user-circle me-2"></i> الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="appointments.html"><i
+                                        class="fas fa-calendar-check me-2"></i> مواعيدي</a></li>
+                            <li><a class="dropdown-item" href="medical-record.html"><i
+                                        class="fas fa-file-medical me-2"></i> السجل الطبي</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i
+                                        class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5 mt-5">
+        <div class="container py-4">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                    <li class="breadcrumb-item"><a href="doctors.html">الأطباء</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">حجز موعد</li>
+                </ol>
+            </nav>
+
+            <h1 class="display-6 fw-bold mb-4">حجز موعد</h1>
+
+            <div class="row g-4">
+                <!-- Booking Form - Right Side -->
+                <div class="col-lg-8 order-1">
+                    <div class="card shadow-sm rounded-4 border-0">
+                        <div class="card-body p-4">
+                            <div class="booking-progress mb-5">
+                                <div class="row text-center position-relative">
+                                    <div class="col-4">
+                                        <div class="booking-step active">
+                                            <div class="booking-step-icon rounded-circle bg-primary text-white mx-auto">
+                                                <i class="fas fa-calendar-day"></i>
+                                            </div>
+                                            <p class="mt-2 small fw-medium">اختيار الموعد</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="booking-step">
+                                            <div class="booking-step-icon rounded-circle bg-light text-muted mx-auto">
+                                                <i class="fas fa-info-circle"></i>
+                                            </div>
+                                            <p class="mt-2 small fw-medium">تفاصيل الحجز</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="booking-step">
+                                            <div class="booking-step-icon rounded-circle bg-light text-muted mx-auto">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <p class="mt-2 small fw-medium">تأكيد الحجز</p>
+                                        </div>
+                                    </div>
+                                    <div class="booking-progress-line"></div>
+                                </div>
+                            </div>
+
+                            <!-- Step 1: Choose Date and Time -->
+                            <div id="booking-step-1" class="booking-step-content">
+                                <h3 class="fs-5 fw-bold mb-4">اختر التاريخ والوقت المناسب</h3>
+
+                                <div class="row g-4">
+                                    <div class="col-md-7">
+                                        <label class="form-label mb-3">اختر التاريخ</label>
+                                        <div id="appointment-calendar" class="mb-4"></div>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <label class="form-label mb-3">الأوقات المتاحة</label>
+                                        <div class="appointment-times">
+                                            <div class="d-flex flex-wrap gap-2 mb-3" id="morning-times">
+                                                <h6 class="w-100 fs-6 text-muted mb-2">صباحاً</h6>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="9:00">9:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="9:30">9:30</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="10:00">10:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="10:30">10:30</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="11:00">11:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="11:30">11:30</button>
+                                            </div>
+
+                                            <div class="d-flex flex-wrap gap-2" id="afternoon-times">
+                                                <h6 class="w-100 fs-6 text-muted mb-2">مساءً</h6>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="1:00">1:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="1:30">1:30</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="2:00">2:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="2:30">2:30</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="3:00">3:00</button>
+                                                <button class="btn btn-outline-primary btn-sm px-3 py-2 rounded-3"
+                                                    data-time="3:30">3:30</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 d-flex justify-content-end">
+                                    <button id="goto-step-2" class="btn btn-primary px-4 py-2 rounded-3" disabled>
+                                        الخطوة التالية
+                                        <i class="fas fa-arrow-left ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Booking Details -->
+                            <div id="booking-step-2" class="booking-step-content d-none">
+                                <h3 class="fs-5 fw-bold mb-4">تفاصيل الحجز</h3>
+
+                                <form id="booking-details-form">
+                                    <!-- <div class="mb-4">
+                                        <label class="form-label">نوع الموعد</label>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="form-check appointment-type-card">
+                                                    <input class="form-check-input" type="radio" name="appointmentType"
+                                                        id="inPerson" value="inPerson" checked>
+                                                    <label class="form-check-label w-100 p-3 border rounded-3"
+                                                        for="inPerson">
+                                                        <div class="d-flex align-items-center">
+                                                            <div
+                                                                class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
+                                                                <i class="fas fa-user-md text-primary"></i>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="mb-1">زيارة في العيادة</h6>
+                                                                <p class="text-muted small mb-0">زيارة الطبيب شخصياً في
+                                                                    العيادة</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-check appointment-type-card">
+                                                    <input class="form-check-input" type="radio" name="appointmentType"
+                                                        id="online" value="online">
+                                                    <label class="form-check-label w-100 p-3 border rounded-3"
+                                                        for="online">
+                                                        <div class="d-flex align-items-center">
+                                                            <div
+                                                                class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
+                                                                <i class="fas fa-video text-primary"></i>
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="mb-1">استشارة عن بعد</h6>
+                                                                <p class="text-muted small mb-0">استشارة عبر الفيديو مع
+                                                                    الطبيب</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label for="patientName" class="form-label">اسم المريض</label>
+                                            <input type="text" class="form-control" id="patientName" value="أحمد محمد"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="patientPhone" class="form-label">رقم الهاتف</label>
+                                            <input type="tel" class="form-control" id="patientPhone" value="0500000000"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="appointmentReason" class="form-label">سبب الزيارة</label>
+                                        <select class="form-select" id="appointmentReason" required>
+                                            <option value="" selected disabled>اختر سبب الزيارة</option>
+                                            <option value="consultation">استشارة طبية</option>
+                                            <option value="followUp">متابعة حالة</option>
+                                            <option value="checkup">فحص دوري</option>
+                                            <option value="treatment">علاج</option>
+                                            <option value="other">أخرى</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="notes" class="form-label">ملاحظات (اختياري)</label>
+                                        <textarea class="form-control" id="notes" rows="3"
+                                            placeholder="أي معلومات إضافية ترغب في إخبار الطبيب بها قبل الموعد"></textarea>
+                                    </div>
+
+                                    <div class="mt-5 d-flex justify-content-between">
+                                        <button id="back-to-step-1" type="button"
+                                            class="btn btn-outline-secondary px-4 py-2 rounded-3">
+                                            <i class="fas fa-arrow-right me-2"></i>
+                                            الخطوة السابقة
+                                        </button>
+                                        <button id="goto-step-3" type="button"
+                                            class="btn btn-primary px-4 py-2 rounded-3">
+                                            الخطوة التالية
+                                            <i class="fas fa-arrow-left ms-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Step 3: Confirm Booking -->
+                            <div id="booking-step-3" class="booking-step-content d-none">
+                                <h3 class="fs-5 fw-bold mb-4">تأكيد الحجز</h3>
+
+                                <div class="card bg-light border-0 rounded-4 mb-4">
+                                    <div class="card-body p-4">
+                                        <h4 class="fs-6 fw-semibold mb-3">تفاصيل الموعد</h4>
+
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">الطبيب</p>
+                                                <p class="fw-medium" id="confirm-doctor">د. عبدالرحمن الأحمد</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">التخصص</p>
+                                                <p class="fw-medium" id="confirm-specialty">طب القلب</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">التاريخ</p>
+                                                <p class="fw-medium" id="confirm-date">الأربعاء، 15 يونيو 2023</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">الوقت</p>
+                                                <p class="fw-medium" id="confirm-time">10:30 صباحاً</p>
+                                            </div>
+                                            <!-- <div class="col-md-6">
+                                                <p class="text-muted small mb-1">نوع الموعد</p>
+                                                <p class="fw-medium" id="confirm-type">زيارة في العيادة</p>
+                                            </div> -->
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">سبب الزيارة</p>
+                                                <p class="fw-medium" id="confirm-reason">استشارة طبية</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card bg-light border-0 rounded-4 mb-4">
+                                    <div class="card-body p-4">
+                                        <h4 class="fs-6 fw-semibold mb-3">تفاصيل الدفع</h4>
+
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">رسوم الكشف</p>
+                                                <p class="fw-medium" id="confirm-fee">30 شيكل</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p class="text-muted small mb-1">طريقة الدفع</p>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="paymentMethod"
+                                                        id="creditCard" value="creditCard" checked>
+                                                    <label class="form-check-label" for="creditCard">
+                                                        <i class="far fa-credit-card me-2"></i>
+                                                        عن طريق التطبيق / بنك فلسطين
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="paymentMethod"
+                                                        id="clinicPayment" value="clinicPayment">
+                                                    <label class="form-check-label" for="clinicPayment">
+                                                        <i class="fas fa-hand-holding-usd me-2"></i>
+                                                        الدفع في العيادة
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="alert alert-info d-flex align-items-center mb-0" role="alert">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            <div>
+                                                في حالة إلغاء الموعد قبل 24 ساعة من الموعد المحدد سيتم استرداد المبلغ
+                                                كاملاً.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label" for="termsCheck">
+                                        أوافق على <a href="#" class="text-decoration-none">الشروط والأحكام</a> و<a
+                                            href="#" class="text-decoration-none">سياسة الخصوصية</a>
+                                    </label>
+                                </div>
+
+                                <div class="mt-5 d-flex justify-content-between">
+                                    <button id="back-to-step-2" type="button"
+                                        class="btn btn-outline-secondary px-4 py-2 rounded-3">
+                                        <i class="fas fa-arrow-right me-2"></i>
+                                        الخطوة السابقة
+                                    </button>
+                                    <button id="confirm-booking" type="button"
+                                        class="btn btn-primary px-4 py-2 rounded-3">
+                                        تأكيد الحجز والدفع
+                                        <i class="fas fa-check ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Booking Confirmed -->
+                            <div id="booking-step-4" class="booking-step-content d-none text-center py-4">
+                                <div class="success-animation mb-4">
+                                    <div class="checkmark-circle">
+                                        <div class="background"></div>
+                                        <div class="checkmark draw"></div>
+                                    </div>
+                                </div>
+
+                                <h3 class="fs-5 fw-bold mb-3">تم تأكيد الحجز بنجاح!</h3>
+                                <p class="text-muted mb-4">تم حجز موعدك بنجاح مع د. عبدالرحمن الأحمد</p>
+
+                                <div class="card bg-light border-0 rounded-4 mb-5 text-start mx-auto"
+                                    style="max-width: 450px;">
+                                    <div class="card-body p-4">
+                                        <div class="row g-3">
+                                            <div class="col-6">
+                                                <p class="text-muted small mb-1">رقم الحجز</p>
+                                                <p class="fw-medium" id="booking-number">BK-12345</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="text-muted small mb-1">التاريخ</p>
+                                                <p class="fw-medium" id="booking-date">الأربعاء، 15 يونيو 2023</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="text-muted small mb-1">الوقت</p>
+                                                <p class="fw-medium" id="booking-time">10:30 صباحاً</p>
+                                            </div>
+                                            <!-- <div class="col-6">
+                                                <p class="text-muted small mb-1">نوع الموعد</p>
+                                                <p class="fw-medium" id="booking-type">زيارة في العيادة</p>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                    <a href="appointments.html" class="btn btn-outline-primary px-4 py-2 rounded-3">
+                                        <i class="fas fa-calendar-check me-2"></i>
+                                        عرض مواعيدي
+                                    </a>
+                                    <a href="index.html" class="btn btn-primary px-4 py-2 rounded-3">
+                                        <i class="fas fa-home me-2"></i>
+                                        العودة إلى الرئيسية
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor Info - Left Side -->
+                <div class="col-lg-4 order-2">
+                    <div class="card shadow-sm rounded-4 border-0 sticky-lg-top" style="top: 100px;">
+                        <div class="card-body p-4">
+                            <h3 class="fs-5 fw-bold mb-3">معلومات الطبيب</h3>
+
+                            <div class="d-flex mb-4">
+                                <div class="rounded-circle bg-light overflow-hidden me-3"
+                                    style="width: 60px; height: 60px;">
+                                    <img id="doctor-image"
+                                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                                        alt="صورة الطبيب" class="w-100 h-100 object-fit-cover">
+                                </div>
+                                <div>
+                                    <h4 id="doctor-name" class="fs-6 fw-semibold mb-1">د. عبدالرحمن الأحمد</h4>
+                                    <p id="doctor-specialty" class="text-medical-600 mb-1">طب القلب</p>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-star text-warning me-1"></i>
+                                        <span id="doctor-rating" class="fw-medium me-1">4.9</span>
+                                        <span class="text-muted small">(<span id="doctor-reviews">124</span>
+                                            تقييم)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-3">
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-map-marker-alt text-medical-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-1">العنوان</p>
+                                    <p id="doctor-location" class="mb-0">عيادة عبدالرحمن - خانيونس</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="me-3">
+                                    <i class="fas fa-comment-medical text-medical-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-1">رسوم الكشف</p>
+                                    <p id="doctor-fee" class="mb-0">30 شيكل</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="fas fa-hourglass-half text-medical-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-muted small mb-1">مدة الكشف</p>
+                                    <p id="doctor-session-duration" class="mb-0">20-30 دقيقة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">ميديكال كونكت</h5>
+                    <p class="text-muted">منصة متكاملة تجمع بين المرضى والأطباء لتقديم خدمة صحية متميزة وسهلة الوصول</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">الرئيسية</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-decoration-none text-muted">الأطباء</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-muted">الخدمات</a>
+                        </li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">من نحن</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">الخدمات</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">استشارات طبية</a></li>
+                        <li class="mb-2"><a href="book-appointment.html" class="text-decoration-none text-muted">حجز
+                                المواعيد</a>
+                        </li>
+                        <li class="mb-2"><a href="case-follow-up.html" class="text-decoration-none text-muted">متابعة
+                                الحالة</a>
+                        </li>
+                        <li class="mb-2"><a href="medical-report.html" class="text-decoration-none text-muted">التقارير
+                                الطبية</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-muted">خدمات أخرى</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">اتصل بنا</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i> فلسطين - غزة </li>
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i> +972567000000</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i> info@medicalconnect.com</li>
+                    </ul>
+                    <div class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2025 ميديكال كونكت. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Flatpickr Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ar.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Booking JavaScript -->
+    <script src="js/book-appointment.js"></script>
+    <script>
+        // تحديث السنة الحالية في الفوتر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

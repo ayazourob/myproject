@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متابعة الحالة - ميديكال كونكت</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styless.css">
+    <link rel="stylesheet" href="css/styles-bootstrap.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary fw-bold">Medical</span>
+                <span class="text-info">Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 me-3">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center text-decoration-none" href="#" role="button"
+                            id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-2"
+                                style="width: 35px; height: 35px;">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="text-dark">أحمد محمد</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="patient-profile.html"><i
+                                        class="fas fa-user-circle me-2"></i> الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="appointments.html"><i
+                                        class="fas fa-calendar-check me-2"></i> مواعيدي</a></li>
+                            <li><a class="dropdown-item" href="medical-record.html"><i
+                                        class="fas fa-file-medical me-2"></i> السجل الطبي</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i
+                                        class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item"><a href="patient-profile.html">الملف الشخصي</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">متابعة الحالة</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-medical-600 text-white py-3">
+                            <h3 class="h5 mb-0">الملف الشخصي</h3>
+                        </div>
+                        <div class="card-body px-0 py-2">
+                            <div class="text-center mb-4 mt-3">
+                                <div class="position-relative d-inline-block">
+                                    <img src="https://via.placeholder.com/80" alt="صورة المستخدم"
+                                        class="rounded-circle border border-3 border-medical-100" width="80"
+                                        height="80">
+                                </div>
+                                <h4 class="h5 mt-3 mb-0" id="patientName">أحمد محمد</h4>
+                                <p class="text-muted small">ID: PAT-54321</p>
+                            </div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="patient-profile.html" class="nav-link px-4 py-3 border-bottom">
+                                        <i class="fas fa-user-circle me-2"></i>
+                                        الملف الشخصي
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="appointments.html" class="nav-link px-4 py-3 border-bottom">
+                                        <i class="fas fa-calendar-check me-2"></i>
+                                        مواعيدي
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="medical-report.html" class="nav-link px-4 py-3 border-bottom">
+                                        <i class="fas fa-notes-medical me-2"></i>
+                                        السجلات الطبية
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="case-follow-up.html" class="nav-link px-4 py-3 border-bottom active">
+                                        <i class="fas fa-clipboard-check me-2"></i>
+                                        متابعة الحالة
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="medications.html" class="nav-link px-4 py-3 border-bottom">
+                                        <i class="fas fa-pills me-2"></i>
+                                        الأدوية
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="account-settings.html" class="nav-link px-4 py-3">
+                                        <i class="fas fa-cog me-2"></i>
+                                        إعدادات الحساب
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-medical-50 p-4 rounded-3">
+                        <h3 class="h5 mb-3">تواصل مع طبيبك</h3>
+                        <p class="text-muted mb-3">هل لديك أي استفسارات حول حالتك الصحية؟</p>
+                        <a href="#" class="btn btn-primary w-100" data-bs-toggle="modal"
+                            data-bs-target="#contactDoctorModal">
+                            <i class="fas fa-comment-medical me-2"></i>
+                            مراسلة الطبيب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div
+                            class="card-header bg-white p-4 d-flex flex-wrap justify-content-between align-items-center">
+                            <div>
+                                <h1 class="h3 mb-2">متابعة الحالة</h1>
+                                <p class="text-muted mb-0">تتبع تقدم حالتك الصحية ومتابعة العلاج</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <div class="form-control d-inline-flex align-items-center py-2">
+                                    <i class="fas fa-filter text-muted me-2"></i>
+                                    <select class="form-select form-select-sm border-0 p-0 pe-5" id="caseSelect">
+                                        <option selected>حالة ضغط الدم وأمراض القلب</option>
+                                        <option>حساسية الجلد</option>
+                                        <option>آلام الظهر المزمنة</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#addHealthDataModal">
+                                    <i class="fas fa-plus me-2"></i>
+                                    إضافة بيانات
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 g-3">
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h2 class="h5 mb-0">المؤشرات الحيوية</h2>
+                                        <a href="#" class="text-decoration-none small" data-bs-toggle="modal"
+                                            data-bs-target="#vitalSignsHistoryModal">
+                                            التاريخ <i class="fas fa-chevron-left ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                    <ul class="list-group list-group-flush">
+                                        <li
+                                            class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="d-block text-muted small">ضغط الدم</span>
+                                                <span class="fs-5 fw-medium" id="bloodPressure">120/80</span>
+                                                <span class="text-muted ms-1 small">mmHg</span>
+                                            </div>
+                                            <span class="badge bg-success rounded-pill">طبيعي</span>
+                                        </li>
+                                        <li
+                                            class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="d-block text-muted small">معدل ضربات القلب</span>
+                                                <span class="fs-5 fw-medium" id="heartRate">72</span>
+                                                <span class="text-muted ms-1 small">نبضة/دقيقة</span>
+                                            </div>
+                                            <span class="badge bg-success rounded-pill">طبيعي</span>
+                                        </li>
+                                        <li
+                                            class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="d-block text-muted small">مستوى الأكسجين</span>
+                                                <span class="fs-5 fw-medium" id="oxygenLevel">98</span>
+                                                <span class="text-muted ms-1 small">%</span>
+                                            </div>
+                                            <span class="badge bg-success rounded-pill">طبيعي</span>
+                                        </li>
+                                        <li
+                                            class="list-group-item px-0 py-3 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <span class="d-block text-muted small">درجة الحرارة</span>
+                                                <span class="fs-5 fw-medium" id="temperature">37.0</span>
+                                                <span class="text-muted ms-1 small">°C</span>
+                                            </div>
+                                            <span class="badge bg-success rounded-pill">طبيعي</span>
+                                        </li>
+                                    </ul>
+
+                                    <p class="text-muted small mt-3 mb-0">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        آخر تحديث: اليوم، 10:30 صباحاً
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h2 class="h5 mb-0">رسم بياني لضغط الدم</h2>
+                                        <div>
+                                            <select class="form-select form-select-sm" id="chartTimeRange">
+                                                <option>آخر 7 أيام</option>
+                                                <option>آخر 30 يوم</option>
+                                                <option>آخر 90 يوم</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="position-relative" style="height: 270px;">
+                                        <canvas id="bloodPressureChart"></canvas>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center gap-4 mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <span class="d-inline-block me-2 rounded-circle"
+                                                style="width: 10px; height: 10px; background-color: #1976D2;"></span>
+                                            <span class="small text-muted">الانقباضي (Systolic)</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="d-inline-block me-2 rounded-circle"
+                                                style="width: 10px; height: 10px; background-color: #42A5F5;"></span>
+                                            <span class="small text-muted">الانبساطي (Diastolic)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 g-3">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white p-3 d-flex justify-content-between align-items-center">
+                                    <h2 class="h5 mb-0">خطة العلاج والأدوية</h2>
+                                    <a href="medications.html" class="text-decoration-none small">
+                                        جميع الأدوية <i class="fas fa-chevron-left ms-1"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-0">
+                                    <ul class="list-group list-group-flush" id="medicationsList">
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h3 class="h6 mb-0">
+                                                    <i class="fas fa-capsules text-primary me-2"></i>
+                                                    Lisinopril
+                                                </h3>
+                                                <span class="badge bg-success small">نشط</span>
+                                            </div>
+                                            <p class="text-muted small mb-1">10mg - مرة واحدة يومياً في الصباح</p>
+                                            <div class="progress my-2" style="height: 5px;">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-muted small">15 يوم متبقي</span>
+                                                <span class="text-muted small">22 من 30 يوم</span>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h3 class="h6 mb-0">
+                                                    <i class="fas fa-pills text-primary me-2"></i>
+                                                    Aspirin
+                                                </h3>
+                                                <span class="badge bg-success small">نشط</span>
+                                            </div>
+                                            <p class="text-muted small mb-1">81mg - مرة واحدة يومياً بعد الإفطار</p>
+                                            <div class="progress my-2" style="height: 5px;">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-muted small">15 يوم متبقي</span>
+                                                <span class="text-muted small">22 من 30 يوم</span>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h3 class="h6 mb-0">
+                                                    <i class="fas fa-tablets text-primary me-2"></i>
+                                                    Atorvastatin
+                                                </h3>
+                                                <span class="badge bg-success small">نشط</span>
+                                            </div>
+                                            <p class="text-muted small mb-1">20mg - مرة واحدة يومياً قبل النوم</p>
+                                            <div class="progress my-2" style="height: 5px;">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                    aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span class="text-muted small">15 يوم متبقي</span>
+                                                <span class="text-muted small">22 من 30 يوم</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-white p-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal"
+                                        data-bs-target="#medicationReminderModal">
+                                        <i class="fas fa-bell me-2"></i>
+                                        إعداد تذكير بالأدوية
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white p-3 d-flex justify-content-between align-items-center">
+                                    <h2 class="h5 mb-0">سجل الأعراض</h2>
+                                    <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#addSymptomModal">
+                                        <i class="fas fa-plus me-1"></i>
+                                        إضافة
+                                    </a>
+                                </div>
+                                <div class="card-body p-0">
+                                    <ul class="list-group list-group-flush" id="symptomsList">
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h3 class="h6 mb-1">الصداع</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        صداع خفيف في منطقة الجبهة، استمر لمدة ساعة تقريباً. تم تناول
+                                                        مسكن.
+                                                    </p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <span class="badge bg-warning text-dark">متوسط</span>
+                                                    <p class="text-muted small mt-1 mb-0">اليوم، 9:30 صباحاً</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h3 class="h6 mb-1">ضيق في التنفس</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        ضيق خفيف في التنفس أثناء صعود الدرج، استمر لبضع دقائق ثم تحسن
+                                                        بعد الراحة.
+                                                    </p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <span class="badge bg-danger">شديد</span>
+                                                    <p class="text-muted small mt-1 mb-0">أمس، 4:15 مساءً</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item px-4 py-3">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <h3 class="h6 mb-1">الدوخة</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        شعور بالدوخة عند النهوض سريعاً من وضعية الجلوس، استمر لثوانٍ
+                                                        معدودة.
+                                                    </p>
+                                                </div>
+                                                <div class="text-end">
+                                                    <span class="badge bg-success">خفيف</span>
+                                                    <p class="text-muted small mt-1 mb-0">منذ يومين، 7:00 صباحاً</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-white p-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm d-block" data-bs-toggle="modal"
+                                        data-bs-target="#symptomAnalysisModal">
+                                        <i class="fas fa-chart-line me-2"></i>
+                                        تحليل الأعراض
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white p-3 d-flex justify-content-between align-items-center">
+                            <h2 class="h5 mb-0">جدول متابعة التعافي</h2>
+                            <span class="badge bg-primary">12 أسبوع</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="position-relative">
+                                <div class="progress recovery-progress" style="height: 5px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+
+                                <div class="row mt-4 position-relative recovery-timeline">
+                                    <div class="col-md-3 text-center mb-4">
+                                        <div class="recovery-point completed">
+                                            <span class="recovery-icon bg-success">
+                                                <i class="fas fa-check text-white"></i>
+                                            </span>
+                                            <div class="mt-2">
+                                                <h3 class="h6 mb-1">الأسبوع 1-2</h3>
+                                                <p class="text-muted small mb-0">استقرار الضغط</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-4">
+                                        <div class="recovery-point completed">
+                                            <span class="recovery-icon bg-success">
+                                                <i class="fas fa-check text-white"></i>
+                                            </span>
+                                            <div class="mt-2">
+                                                <h3 class="h6 mb-1">الأسبوع 3-4</h3>
+                                                <p class="text-muted small mb-0">بداية النشاط الخفيف</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-4">
+                                        <div class="recovery-point active">
+                                            <span class="recovery-icon bg-primary">
+                                                <i class="fas fa-sync-alt text-white"></i>
+                                            </span>
+                                            <div class="mt-2">
+                                                <h3 class="h6 mb-1">الأسبوع 5-8</h3>
+                                                <p class="text-muted small mb-0">زيادة النشاط البدني</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-center mb-4">
+                                        <div class="recovery-point">
+                                            <span class="recovery-icon bg-light">
+                                                <i class="fas fa-flag text-muted"></i>
+                                            </span>
+                                            <div class="mt-2">
+                                                <h3 class="h6 mb-1">الأسبوع 9-12</h3>
+                                                <p class="text-muted small mb-0">العودة للأنشطة الطبيعية</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-primary mt-3 mb-0">
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <i class="fas fa-info-circle fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="h6 mb-1">ملاحظة الطبيب</h3>
+                                        <p class="mb-0">
+                                            تقدم ممتاز في خطة العلاج. ينصح بزيادة النشاط البدني تدريجياً مع الاستمرار في
+                                            مراقبة ضغط الدم.
+                                            يمكنك الآن ممارسة المشي لمدة 30 دقيقة يومياً.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white p-3">
+                                    <h2 class="h5 mb-0">نصائح صحية</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item px-0 py-3 border-0">
+                                            <div class="d-flex">
+                                                <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
+                                                    <i class="fas fa-utensils text-primary"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="h6 mb-2">نظام غذائي صحي للقلب</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        تناول الأطعمة الغنية بالألياف والمغذيات، مثل الفواكه والخضروات
+                                                        والحبوب الكاملة. تقليل تناول الأطعمة المالحة والدهون المشبعة.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item px-0 py-3 border-top">
+                                            <div class="d-flex">
+                                                <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3">
+                                                    <i class="fas fa-walking text-success"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="h6 mb-2">النشاط البدني المنتظم</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        ممارسة النشاط البدني المعتدل لمدة 30 دقيقة على الأقل، 5 أيام في
+                                                        الأسبوع. يمكن تقسيمها إلى ثلاث فترات بمعدل 10 دقائق.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item px-0 py-3 border-top">
+                                            <div class="d-flex">
+                                                <div class="rounded-circle bg-warning bg-opacity-10 p-3 me-3">
+                                                    <i class="fas fa-ban text-warning"></i>
+                                                </div>
+                                                <div>
+                                                    <h3 class="h6 mb-2">الابتعاد عن التدخين</h3>
+                                                    <p class="text-muted small mb-0">
+                                                        التدخين يرفع ضغط الدم ويزيد من خطر الإصابة بأمراض القلب والسكتة
+                                                        الدماغية. الإقلاع عن التدخين يحسن صحة القلب بشكل كبير.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-white p-3 d-flex justify-content-between align-items-center">
+                                    <h2 class="h5 mb-0">المواعيد القادمة</h2>
+                                    <a href="appointments.html" class="text-decoration-none small">
+                                        جميع المواعيد <i class="fas fa-chevron-left ms-1"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="list-group list-group-flush" id="upcomingAppointmentsList">
+                                        <div class="list-group-item p-3">
+                                            <div class="d-flex">
+                                                <div class="me-3">
+                                                    <div class="text-center bg-light rounded py-2 px-3">
+                                                        <p class="small text-muted mb-0">أبريل</p>
+                                                        <p class="h5 mb-0">20</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                                        <h3 class="h6 mb-0">د. خالد عبدالرحمن</h3>
+                                                        <span class="badge bg-warning text-dark">قادم</span>
+                                                    </div>
+                                                    <p class="text-muted small mb-1">أخصائي القلب</p>
+                                                    <div class="d-flex text-muted small">
+                                                        <div class="me-3">
+                                                            <i class="fas fa-clock me-1"></i> 10:30 صباحاً
+                                                        </div>
+                                                        <div>
+                                                            <i class="fas fa-clinic-medical me-1"></i> عيادة
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item p-3">
+                                            <div class="d-flex">
+                                                <div class="me-3">
+                                                    <div class="text-center bg-light rounded py-2 px-3">
+                                                        <p class="small text-muted mb-0">مايو</p>
+                                                        <p class="h5 mb-0">15</p>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                                        <h3 class="h6 mb-0">د. نوال الشمري</h3>
+                                                        <span class="badge bg-warning text-dark">قادم</span>
+                                                    </div>
+                                                    <p class="text-muted small mb-1">أخصائية التغذية</p>
+                                                    <div class="d-flex text-muted small">
+                                                        <div class="me-3">
+                                                            <i class="fas fa-clock me-1"></i> 2:00 مساءً
+                                                        </div>
+                                                        <div>
+                                                            <i class="fas fa-video me-1"></i> عن بُعد
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white p-3">
+                                    <a href="doctors.html" class="btn btn-primary btn-sm d-block">
+                                        <i class="fas fa-calendar-plus me-2"></i>
+                                        حجز موعد جديد
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">ميديكال كونكت</h5>
+                    <p class="text-muted">منصة متكاملة تجمع بين المرضى والأطباء لتقديم خدمة صحية متميزة وسهلة الوصول</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">الرئيسية</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-decoration-none text-muted">الأطباء</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-muted">الخدمات</a>
+                        </li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">من نحن</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">الخدمات</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">استشارات طبية</a></li>
+                        <li class="mb-2"><a href="book-appointment.html" class="text-decoration-none text-muted">حجز
+                                المواعيد</a>
+                        </li>
+                        <li class="mb-2"><a href="case-follow-up.html" class="text-decoration-none text-muted">متابعة
+                                الحالة</a>
+                        </li>
+                        <li class="mb-2"><a href="medical-report.html" class="text-decoration-none text-muted">التقارير
+                                الطبية</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-muted">خدمات أخرى</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">اتصل بنا</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i> فلسطين - غزة </li>
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i> +972567000000</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i> info@medicalconnect.com</li>
+                    </ul>
+                    <div class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2025 ميديكال كونكت. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- إضافة بيانات صحية -->
+    <div class="modal fade" id="addHealthDataModal" tabindex="-1" aria-labelledby="addHealthDataModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addHealthDataModalLabel">إضافة بيانات صحية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="healthDataForm">
+                        <div class="mb-3">
+                            <label for="healthDataType" class="form-label">نوع البيانات</label>
+                            <select class="form-select" id="healthDataType" required>
+                                <option value="" selected disabled>اختر نوع البيانات</option>
+                                <option value="blood_pressure">ضغط الدم</option>
+                                <option value="heart_rate">معدل ضربات القلب</option>
+                                <option value="temperature">درجة الحرارة</option>
+                                <option value="oxygen_level">مستوى الأكسجين</option>
+                                <option value="weight">الوزن</option>
+                            </select>
+                        </div>
+
+                        <div id="bloodPressureFields" style="display: none;">
+                            <div class="row g-3 mb-3">
+                                <div class="col-6">
+                                    <label for="systolic" class="form-label">الانقباضي (Systolic)</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="systolic" placeholder="120">
+                                        <span class="input-group-text">mmHg</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label for="diastolic" class="form-label">الانبساطي (Diastolic)</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="diastolic" placeholder="80">
+                                        <span class="input-group-text">mmHg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="otherMeasurementField" style="display: none;">
+                            <div class="mb-3">
+                                <label for="measurementValue" class="form-label">القيمة</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="measurementValue" step="0.1">
+                                    <span class="input-group-text" id="measurementUnit">وحدة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="measurementTime" class="form-label">وقت القياس</label>
+                            <input type="datetime-local" class="form-control" id="measurementTime" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">ملاحظات (اختياري)</label>
+                            <textarea class="form-control" id="notes" rows="3"
+                                placeholder="أي ملاحظات إضافية حول القياس..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" id="saveHealthDataBtn">حفظ البيانات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- إضافة عرض -->
+    <div class="modal fade" id="addSymptomModal" tabindex="-1" aria-labelledby="addSymptomModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addSymptomModalLabel">إضافة عرض</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="symptomForm">
+                        <div class="mb-3">
+                            <label for="symptomName" class="form-label">اسم العرض</label>
+                            <input type="text" class="form-control" id="symptomName"
+                                placeholder="مثال: صداع، ألم في المعدة..." required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">شدة العرض</label>
+                            <div class="d-flex gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="symptomSeverity"
+                                        id="severityMild" value="mild" checked>
+                                    <label class="form-check-label" for="severityMild">
+                                        خفيف
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="symptomSeverity"
+                                        id="severityModerate" value="moderate">
+                                    <label class="form-check-label" for="severityModerate">
+                                        متوسط
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="symptomSeverity"
+                                        id="severitySevere" value="severe">
+                                    <label class="form-check-label" for="severitySevere">
+                                        شديد
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="symptomTime" class="form-label">وقت ظهور العرض</label>
+                            <input type="datetime-local" class="form-control" id="symptomTime" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="symptomDescription" class="form-label">وصف العرض</label>
+                            <textarea class="form-control" id="symptomDescription" rows="3"
+                                placeholder="اكتب وصفاً مفصلاً للعرض..." required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="actionsTaken" class="form-label">الإجراءات المتخذة (اختياري)</label>
+                            <textarea class="form-control" id="actionsTaken" rows="2"
+                                placeholder="هل قمت بأي إجراء للتخفيف من العرض؟ مثال: تناول دواء، الراحة..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" id="saveSymptomBtn">حفظ العرض</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مراسلة الطبيب -->
+    <div class="modal fade" id="contactDoctorModal" tabindex="-1" aria-labelledby="contactDoctorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactDoctorModalLabel">مراسلة الطبيب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactDoctorForm">
+                        <div class="mb-3">
+                            <label for="doctorSelect" class="form-label">اختر الطبيب</label>
+                            <select class="form-select" id="doctorSelect" required>
+                                <option value="" selected disabled>اختر الطبيب</option>
+                                <option value="1">د. خالد عبدالرحمن - أخصائي القلب</option>
+                                <option value="2">د. نوال الشمري - أخصائية التغذية</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="messageSubject" class="form-label">موضوع الرسالة</label>
+                            <input type="text" class="form-control" id="messageSubject" placeholder="موضوع رسالتك"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="messageBody" class="form-label">نص الرسالة</label>
+                            <textarea class="form-control" id="messageBody" rows="5" placeholder="اكتب رسالتك هنا..."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="urgentMessage">
+                            <label class="form-check-label" for="urgentMessage">
+                                هذه رسالة عاجلة
+                            </label>
+                        </div>
+
+                        <div class="alert alert-info small">
+                            <i class="fas fa-info-circle me-2"></i>
+                            يرجى العلم أن الطبيب قد يستغرق 24-48 ساعة للرد على الاستفسارات غير العاجلة.
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" id="sendMessageBtn">إرسال الرسالة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- سجل المؤشرات الحيوية -->
+    <div class="modal fade" id="vitalSignsHistoryModal" tabindex="-1" aria-labelledby="vitalSignsHistoryModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="vitalSignsHistoryModalLabel">سجل المؤشرات الحيوية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>التاريخ</th>
+                                    <th>ضغط الدم</th>
+                                    <th>النبض</th>
+                                    <th>الأكسجين</th>
+                                    <th>الحرارة</th>
+                                    <th>ملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15 أبريل 2023، 10:30 صباحاً</td>
+                                    <td>120/80</td>
+                                    <td>72</td>
+                                    <td>98%</td>
+                                    <td>37.0°C</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>14 أبريل 2023، 9:15 صباحاً</td>
+                                    <td>122/82</td>
+                                    <td>68</td>
+                                    <td>97%</td>
+                                    <td>36.8°C</td>
+                                    <td>بعد التمرين الصباحي</td>
+                                </tr>
+                                <tr>
+                                    <td>13 أبريل 2023، 8:30 صباحاً</td>
+                                    <td>125/83</td>
+                                    <td>70</td>
+                                    <td>98%</td>
+                                    <td>36.9°C</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>12 أبريل 2023، 9:45 صباحاً</td>
+                                    <td>128/85</td>
+                                    <td>75</td>
+                                    <td>97%</td>
+                                    <td>37.1°C</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>11 أبريل 2023، 10:00 صباحاً</td>
+                                    <td>132/88</td>
+                                    <td>78</td>
+                                    <td>96%</td>
+                                    <td>37.0°C</td>
+                                    <td>قبل تناول الدواء</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-download me-2"></i>
+                        تحميل السجل
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تذكير الأدوية -->
+    <div class="modal fade" id="medicationReminderModal" tabindex="-1" aria-labelledby="medicationReminderModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="medicationReminderModalLabel">إعداد تذكير بالأدوية</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="medicationReminderForm">
+                        <div class="mb-3">
+                            <label for="medicationSelect" class="form-label">اختر الدواء</label>
+                            <select class="form-select" id="medicationSelect" required>
+                                <option value="" selected disabled>اختر الدواء</option>
+                                <option value="lisinopril">Lisinopril</option>
+                                <option value="aspirin">Aspirin</option>
+                                <option value="atorvastatin">Atorvastatin</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label d-block">وقت التذكير</label>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reminderMorning" checked>
+                                        <label class="form-check-label" for="reminderMorning">
+                                            صباحاً (8:00)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reminderNoon">
+                                        <label class="form-check-label" for="reminderNoon">
+                                            ظهراً (12:00)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reminderEvening">
+                                        <label class="form-check-label" for="reminderEvening">
+                                            مساءً (6:00)
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="reminderNight">
+                                        <label class="form-check-label" for="reminderNight">
+                                            ليلاً (10:00)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">طريقة التذكير</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="reminderApp" checked>
+                                <label class="form-check-label" for="reminderApp">
+                                    إشعار في التطبيق
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="reminderEmail" checked>
+                                <label class="form-check-label" for="reminderEmail">
+                                    البريد الإلكتروني
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="reminderSMS">
+                                <label class="form-check-label" for="reminderSMS">
+                                    رسالة نصية (SMS)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="reminderRepeat" checked>
+                            <label class="form-check-label" for="reminderRepeat">
+                                تكرار التذكير في حالة عدم الاستجابة
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاق</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">حفظ التذكير</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تحليل الأعراض -->
+    <div class="modal fade" id="symptomAnalysisModal" tabindex="-1" aria-labelledby="symptomAnalysisModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="symptomAnalysisModalLabel">تحليل الأعراض</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning">
+                        <i class="fas fa-info-circle me-2"></i>
+                        هذا التحليل للمساعدة فقط ولا يغني عن استشارة الطبيب.
+                    </div>
+
+                    <h6 class="mb-3">الأعراض الأكثر تكراراً:</h6>
+                    <div class="row mb-4">
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-light rounded p-3">
+                                <div class="fs-5 fw-medium mb-2 text-primary">الصداع</div>
+                                <div class="fs-4">4 مرات</div>
+                                <div class="text-muted small">آخر 30 يوم</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-light rounded p-3">
+                                <div class="fs-5 fw-medium mb-2 text-primary">ضيق التنفس</div>
+                                <div class="fs-4">3 مرات</div>
+                                <div class="text-muted small">آخر 30 يوم</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="bg-light rounded p-3">
+                                <div class="fs-5 fw-medium mb-2 text-primary">الدوخة</div>
+                                <div class="fs-4">2 مرات</div>
+                                <div class="text-muted small">آخر 30 يوم</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6 class="mb-3">العلاقة بين الأعراض والمؤشرات الحيوية:</h6>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>العرض</th>
+                                    <th>ضغط الدم (متوسط)</th>
+                                    <th>النبض (متوسط)</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الصداع</td>
+                                    <td>135/88</td>
+                                    <td>85</td>
+                                    <td><span class="badge bg-warning text-dark">ارتفاع طفيف</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ضيق التنفس</td>
+                                    <td>145/95</td>
+                                    <td>92</td>
+                                    <td><span class="badge bg-danger">ارتفاع ملحوظ</span></td>
+                                </tr>
+                                <tr>
+                                    <td>الدوخة</td>
+                                    <td>130/85</td>
+                                    <td>78</td>
+                                    <td><span class="badge bg-info text-dark">طبيعي نسبياً</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h6 class="mb-3">التوصيات:</h6>
+                    <div class="alert alert-primary">
+                        <ol class="mb-0">
+                            <li class="mb-2">مراقبة ضغط الدم بانتظام، خاصة عند الشعور بالصداع أو ضيق التنفس.</li>
+                            <li class="mb-2">الالتزام بأخذ الأدوية في أوقاتها المحددة.</li>
+                            <li class="mb-2">الاتصال بالطبيب إذا استمر ضيق التنفس أو تكرر بشكل متزايد.</li>
+                            <li class="mb-2">تقليل استهلاك الملح والكافيين.</li>
+                            <li>ممارسة تمارين الاسترخاء والتنفس العميق عند الشعور بضيق التنفس الخفيف.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-print me-2"></i>
+                        طباعة التقرير
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/case-follow-up.js"></script>
+</body>
+
+</html>

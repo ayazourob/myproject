@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Connect - الرئيسية</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-medical-800 fw-bold">Medical</span>
+                <span class="text-medical-600">Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 me-3">
+                    <a href="login.html" class="nav-link text-dark">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-primary rounded-pill px-4 py-2">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section position-relative pt-5 overflow-hidden">
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-image opacity-10"></div>
+        
+        <div class="container py-5 position-relative z-2">
+            <div class="row align-items-center py-5">
+                <div class="col-md-6 text-md-end text-center">
+                    <div class="bg-medical-100 text-medical-800 d-inline-block fs-6 px-3 py-1 rounded-pill mb-3 animate-reveal">
+                        منصة للخدمات الطبية المتكاملة
+                    </div>
+                    <h1 class="display-4 fw-bold text-dark mb-3 animate-reveal-delay-2">
+                        رعاية صحية <span class="text-medical-600">متميزة</span> بين يديك
+                    </h1>
+                    <p class="lead text-muted mb-4 animate-reveal-delay-3">
+                        نقدم لك أفضل الأطباء المتخصصين، سهولة حجز المواعيد، ومتابعة شاملة لصحتك في مكان واحد
+                    </p>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-md-end justify-content-center animate-reveal-delay-3">
+                        <a href="doctors.html" class="btn btn-primary btn-lg px-4 rounded-pill shadow-sm">
+                            ابحث عن طبيب
+                        </a>
+                        <a href="services.html" class="btn btn-link text-medical-600 px-4">
+                            تعرف على خدماتنا
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mt-5 mt-md-0 text-center animate-reveal-delay-2">
+                    <div class="position-relative">
+                        <div class="hero-image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1651008376811-c430ae3c33f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1287&q=80" 
+                             alt="Medical professional with tablet" 
+                             class="img-fluid rounded-4 shadow-lg img-blur-in" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-bottom-fade"></div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-medical-50 border-top border-bottom border-medical-100">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="bg-white rounded-4 p-4 text-center shadow-sm border border-light h-100">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-users fa-2x text-medical-500"></i>
+                        </div>
+                        <h3 class="fs-3 fw-bold text-dark mb-1">+50,000</h3>
+                        <p class="text-muted small">مريض مسجل</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white rounded-4 p-4 text-center shadow-sm border border-light h-100">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-calendar-check fa-2x text-medical-500"></i>
+                        </div>
+                        <h3 class="fs-3 fw-bold text-dark mb-1">+120,000</h3>
+                        <p class="text-muted small">موعد تم حجزه</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white rounded-4 p-4 text-center shadow-sm border border-light h-100">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-award fa-2x text-medical-500"></i>
+                        </div>
+                        <h3 class="fs-3 fw-bold text-dark mb-1">+2,500</h3>
+                        <p class="text-muted small">طبيب متخصص</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bg-white rounded-4 p-4 text-center shadow-sm border border-light h-100">
+                        <div class="d-flex justify-content-center mb-3">
+                            <i class="fas fa-hospital fa-2x text-medical-500"></i>
+                        </div>
+                        <h3 class="fs-3 fw-bold text-dark mb-1">+300</h3>
+                        <p class="text-muted small">مستشفى وعيادة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="badge bg-medical-100 text-medical-800 fs-6 px-3 py-2 rounded-pill mb-3">
+                    خدماتنا المميزة
+                </div>
+                <h2 class="display-6 fw-bold text-dark mb-3">نقدم لك تجربة طبية متكاملة</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    مجموعة من الخدمات المتكاملة لضمان حصولك على أفضل رعاية صحية بأسهل الطرق وأعلى جودة
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-calendar-alt fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">حجز المواعيد بسهولة</h3>
+                            <p class="text-muted">احجز موعدك مع الطبيب المناسب في أي وقت وبدون انتظار</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-file-medical fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">ملف طبي متكامل</h3>
+                            <p class="text-muted">احتفظ بجميع سجلاتك الطبية في مكان واحد وآمن</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-heartbeat fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">متابعة مستمرة</h3>
+                            <p class="text-muted">تواصل مع طبيبك للمتابعة بعد الزيارة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-stethoscope fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">أطباء متخصصون</h3>
+                            <p class="text-muted">نخبة من أفضل الأطباء في جميع التخصصات</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-credit-card fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">دفع إلكتروني آمن</h3>
+                            <p class="text-muted">ادفع رسوم الاستشارة بسهولة وأمان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body text-end">
+                            <div class="mb-4 d-inline-block p-3 bg-medical-50 rounded-4">
+                                <i class="fas fa-bell fa-2x text-medical-500"></i>
+                            </div>
+                            <h3 class="fs-5 fw-bold mb-3">تذكير بالمواعيد</h3>
+                            <p class="text-muted">تلقي إشعارات تذكيرية قبل موعدك</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Doctors -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold text-dark mb-3">نخبة من أفضل الأطباء المتخصصين</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    نعمل مع أفضل الأطباء المتخصصين في مختلف المجالات الطبية لنوفر لك أفضل خدمة صحية ممكنة
+                </p>
+            </div>
+            
+            <div class="row g-4" id="featuredDoctors">
+                <!-- سيتم إضافة الأطباء عن طريق JavaScript -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="doctors.html" class="btn btn-outline-primary rounded-pill px-4 py-2">
+                    عرض جميع الأطباء 
+                    <i class="fas fa-arrow-left ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-white position-relative overflow-hidden">
+        <div class="container position-relative">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold text-dark mb-3">ماذا يقول عملاؤنا</h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    آراء مرضانا وأطبائنا حول تجربتهم مع منصة ميديكال كونكت
+                </p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="position-relative bg-white rounded-4 shadow-lg p-4 p-md-5 border border-light" id="testimonialsContainer">
+                        <!-- سيتم إضافة التوصيات عن طريق JavaScript -->
+                    </div>
+                    
+                    <div class="d-flex justify-content-center mt-4">
+                        <div class="testimonial-dots" id="testimonialDots">
+                            <!-- سيتم إضافة نقاط التنقل عن طريق JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 text-white gradient-primary position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-pattern opacity-10"></div>
+        <div class="container position-relative z-2">
+            <div class="row align-items-center py-3">
+                <div class="col-lg-6 text-center text-lg-end">
+                    <h2 class="display-6 fw-bold mb-3">احصل على تطبيق ميديكال كونكت</h2>
+                    <p class="text-white-50 mb-4">
+                        قم بتحميل تطبيقنا على هاتفك واحصل على خدماتنا الطبية أينما كنت وفي أي وقت. متاح الآن على متجر آبل وجوجل بلاي.
+                    </p>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-end">
+                        <a href="#" class="btn btn-light px-4 py-2 rounded-3">
+                            <i class="fas fa-download me-2"></i>
+                            تحميل للأندرويد
+                        </a>
+                        <a href="#" class="btn btn-light px-4 py-2 rounded-3">
+                            <i class="fas fa-download me-2"></i>
+                            تحميل للآيفون
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                    <div class="position-relative">
+                        <div class="app-image-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Mobile App" 
+                             class="img-fluid rounded-4 shadow-lg border border-white border-opacity-25 img-blur-in"
+                             style="max-width: 300px;" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-top border-white border-opacity-25 text-center">
+                <h3 class="fs-4 fw-semibold mb-4">هل أنت طبيب؟ انضم إلى منصتنا الآن</h3>
+                <a href="register-doctor.html" class="btn btn-outline-light rounded-pill px-4 py-2">
+                    سجل كطبيب الآن
+                    <i class="fas fa-arrow-left ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="d-inline-flex align-items-center">
+                            <span class="text-white fw-bold fs-4 me-1">Medical</span>
+                            <span class="text-medical-400 fw-medium fs-4">Connect</span>
+                        </a>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        منصة متكاملة للخدمات الطبية تجمع بين الأطباء والمرضى وتوفر تجربة صحية فريدة وسهلة الاستخدام.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="text-secondary hover-text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-secondary hover-text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-secondary hover-text-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-secondary hover-text-primary"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fs-5 fw-semibold mb-4 text-medical-300">روابط سريعة</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none hover-text-white">الرئيسية</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-secondary text-decoration-none hover-text-white">الأطباء</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-secondary text-decoration-none hover-text-white">خدماتنا</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none hover-text-white">من نحن</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-secondary text-decoration-none hover-text-white">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fs-5 fw-semibold mb-4 text-medical-300">خدمات المنصة</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="appointments.html" class="text-secondary text-decoration-none hover-text-white">حجز المواعيد</a></li>
+                        <li class="mb-2"><a href="medical-file.html" class="text-secondary text-decoration-none hover-text-white">الملف الطبي</a></li>
+                        <li class="mb-2"><a href="consultations.html" class="text-secondary text-decoration-none hover-text-white">استشارات طبية</a></li>
+                        <li class="mb-2"><a href="reviews.html" class="text-secondary text-decoration-none hover-text-white">تقييمات الأطباء</a></li>
+                        <li class="mb-2"><a href="emergencies.html" class="text-secondary text-decoration-none hover-text-white">حالات الطوارئ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fs-5 fw-semibold mb-4 text-medical-300">تواصل معنا</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-phone-alt text-medical-400 ms-2 mt-1"></i>
+                            <span class="text-secondary">+966 12 345 6789</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-envelope text-medical-400 ms-2 mt-1"></i>
+                            <span class="text-secondary">info@medicalconnect.com</span>
+                        </li>
+                        <li class="d-flex">
+                            <i class="fas fa-map-marker-alt text-medical-400 ms-2 mt-1"></i>
+                            <span class="text-secondary">
+                                برج المملكة، الدور 20، طريق الملك فهد، الرياض، المملكة العربية السعودية
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-5 pt-4 border-top border-secondary text-center">
+                <p class="text-secondary">
+                    &copy; <span id="current-year"></span> Medical Connect. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // تحديث السنة الحالية في الفوتر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

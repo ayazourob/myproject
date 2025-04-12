@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Connect - الأطباء</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-bootstrap.css">
+
+</head>
+
+<body class="min-vh-100 d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-primary fw-bold">Medical</span>
+                <span class="text-info">Connect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-link text-secondary me-2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-link text-secondary me-2">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-primary rounded-pill">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Doctors Header -->
+    <div class="pt-5 bg-medical-50">
+        <div class="container pt-5 pb-4">
+            <div class="text-center my-5">
+                <h1 class="display-5 fw-bold text-dark mb-3">ابحث عن أفضل الأطباء المتخصصين</h1>
+                <p class="text-muted mx-auto" style="max-width: 700px;">
+                    قائمة شاملة بأفضل الأطباء المتخصصين في مختلف المجالات الطبية من مختلف أنحاء قطاع غزة
+                </p>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="bg-white p-4 rounded-4 shadow-sm mb-5">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <div class="position-relative">
+                            <i
+                                class="fas fa-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                            <input type="text" id="searchInput" class="form-control ps-5 py-2 rounded-3"
+                                placeholder="ابحث باسم الطبيب أو التخصص">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select id="specialtyFilter" class="form-select py-2 rounded-3">
+                            <option value="جميع التخصصات">جميع التخصصات</option>
+                            <option value="طب القلب">طب القلب</option>
+                            <option value="طب الأطفال">طب الأطفال</option>
+                            <option value="طب الأعصاب">طب الأعصاب</option>
+                            <option value="جراحة العظام">جراحة العظام</option>
+                            <option value="طب العيون">طب العيون</option>
+                            <option value="طب الأسنان">طب الأسنان</option>
+                            <option value="طب الجلدية">طب الجلدية</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <select id="locationFilter" class="form-select py-2 rounded-3">
+                            <option value="جميع المدن">جميع المدن</option>
+                            <option value="شمال غزة">شمال غزة</option>
+                            <option value="غزة">غزة</option>
+                            <option value="المغازي">المغازي</option>
+                            <option value="النصيرات">النصيرات</option>
+                            <option value="دير البلح">دير البلح</option>
+                            <option value="خانيونس">خانيونس</option>
+                            <option value="البريج">البريج</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-1">
+                        <button id="toggleAdvancedFilters"
+                            class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-filter me-md-2"></i>
+                            <span class="d-none d-lg-inline">فلترة</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="advancedFilters" class="row g-3 mt-3 pt-3 border-top d-none">
+                    <div class="col-md-4">
+                        <label class="form-label small fw-medium text-dark mb-2">التقييم</label>
+                        <select id="ratingFilter" class="form-select py-2 rounded-3">
+                            <option value="">جميع التقييمات</option>
+                            <option value="4.5">4.5 نجوم وأعلى</option>
+                            <option value="4.0">4.0 نجوم وأعلى</option>
+                            <option value="3.5">3.5 نجوم وأعلى</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label small fw-medium text-dark mb-2">سعر الكشف</label>
+                        <select id="priceFilter" class="form-select py-2 rounded-3">
+                            <option value="">جميع الأسعار</option>
+                            <option value="200">أقل من 20 شيكل</option>
+                            <option value="300">أقل من 30 شيكل</option>
+                            <option value="400">أقل من 40 شيكل</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label small fw-medium text-dark mb-2">المتاح اليوم</label>
+                        <div class="form-check form-switch pt-2">
+                            <input class="form-check-input" type="checkbox" id="availableTodayFilter">
+                            <label class="form-check-label" for="availableTodayFilter">متاح اليوم فقط</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results info -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <p class="text-muted mb-0"><span id="doctorsCount">0</span> طبيب متاح</p>
+                <select id="sortSelect" class="form-select form-select-sm py-2 rounded-3" style="width: auto;">
+                    <option value="rating">الترتيب حسب: التقييم الأعلى</option>
+                    <option value="experience">الترتيب حسب: الخبرة</option>
+                    <option value="fee-asc">الترتيب حسب: السعر (الأقل)</option>
+                    <option value="fee-desc">الترتيب حسب: السعر (الأعلى)</option>
+                </select>
+            </div>
+
+            <!-- Doctors List -->
+            <div class="row g-4 mb-5" id="doctorsList">
+                <!-- سيتم إضافة الأطباء عن طريق JavaScript -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-5 d-none">
+                <div class="text-medical-500 mb-4">
+                    <i class="far fa-sad-tear fa-4x"></i>
+                </div>
+                <h3 class="fs-4 fw-semibold text-dark mb-3">لم يتم العثور على أطباء</h3>
+                <p class="text-muted mb-4">
+                    لم نتمكن من إيجاد أطباء مطابقين للفلاتر المحددة. يرجى تغيير معايير البحث والمحاولة مرة أخرى.
+                </p>
+                <button id="resetFilters" class="btn btn-primary px-4 py-2 rounded-3">
+                    إعادة ضبط الفلاتر
+                </button>
+            </div>
+
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center mt-5" id="pagination">
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">ميديكال كونكت</h5>
+                    <p class="text-muted">منصة متكاملة تجمع بين المرضى والأطباء لتقديم خدمة صحية متميزة وسهلة الوصول</p>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-muted">الرئيسية</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-decoration-none text-muted">الأطباء</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-decoration-none text-muted">الخدمات</a>
+                        </li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">من نحن</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">الخدمات</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">استشارات طبية</a></li>
+                        <li class="mb-2"><a href="book-appointment.html" class="text-decoration-none text-muted">حجز
+                                المواعيد</a></li>
+                        <li class="mb-2"><a href="case-follow-up.html" class="text-decoration-none text-muted">متابعة
+                                الحالة</a></li>
+                        <li class="mb-2"><a href="medical-report.html" class="text-decoration-none text-muted">التقارير
+                                الطبية</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">خدمات أخرى</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">اتصل بنا</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-muted"><i class="fas fa-map-marker-alt me-2"></i> فلسطين - غزة </li>
+                        <li class="mb-2 text-muted"><i class="fas fa-phone me-2"></i> +972567000000</li>
+                        <li class="mb-2 text-muted"><i class="fas fa-envelope me-2"></i> info@medicalconnect.com</li>
+                    </ul>
+                    <div class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary" type="button">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted small">
+                &copy; 2025 ميديكال كونكت. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Doctors Page JavaScript -->
+    <script src="js/doctors.js"></script>
+    <script>
+        // تحديث السنة الحالية في الفوتر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

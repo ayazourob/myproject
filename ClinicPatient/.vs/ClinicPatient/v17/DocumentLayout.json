@@ -1,0 +1,273 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\models\\viewmodels\\appointmentviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:models\\viewmodels\\appointmentviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\models\\viewmodels\\aboutusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:models\\viewmodels\\aboutusviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\models\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:models\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\models\\viewmodels\\patientviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:models\\viewmodels\\patientviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\models\\viewmodels\\doctorviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:models\\viewmodels\\doctorviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|c:\\users\\aya\\desktop\\clinicpatient\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7BA8FCD-BD76-44A2-AA0A-610553776A8F}|ClinicPatient.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppointmentViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\AppointmentViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\AppointmentViewModels.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\AppointmentViewModels.cs",
+              "RelativeToolTip": "Models\\ViewModels\\AppointmentViewModels.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA3wDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T19:49:20.366Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T20:55:22.378Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Controllers\\AppointmentController.cs",
+              "ViewState": "AQIAAGkBAAAAAAAAAAAswHwBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T20:52:00.378Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bootstrap.bundle.js",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+              "ViewState": "AQIAAKUNAAAAAAAAAAAowLcRAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-12T13:51:32.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-06T15:07:49.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T15:02:25.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T13:41:58.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\Entities\\ApplicationUser.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T15:03:22.418Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AboutUsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\AboutUsViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\AboutUsViewModel.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\AboutUsViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\AboutUsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T15:41:54.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T18:09:55.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:45:05.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PatientViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\PatientViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\PatientViewModels.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\PatientViewModels.cs",
+              "RelativeToolTip": "Models\\ViewModels\\PatientViewModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T15:42:24.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DoctorViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\DoctorViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\DoctorViewModels.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Models\\ViewModels\\DoctorViewModels.cs",
+              "RelativeToolTip": "Models\\ViewModels\\DoctorViewModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T15:42:51.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA5wA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:37:08.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\Aya\\Desktop\\ClinicPatient\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Controllers\\DoctorController.cs",
+              "ViewState": "AQIAAAUBAAAAAAAAAAD4vw8BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T20:53:25.44Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
